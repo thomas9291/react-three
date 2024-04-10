@@ -1,8 +1,11 @@
-
+.title{
+  text-align: center;
+  margin: 1rem;
+}
 
 .cardContainer{
   display:flex ;
-  flex-direction: column;
+
   justify-content: center;
   align-items: center;
   flex-wrap: wrap
@@ -12,6 +15,7 @@
 }
 
 .card {
+  margin: 1rem;
   padding: 1rem 1.2rem;
 border: 1px solid black;
 border-radius: 10px; 
