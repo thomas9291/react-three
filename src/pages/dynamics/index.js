@@ -11,7 +11,7 @@ const Dynamics = () => {
         <h2>Dynamics</h2>
         <Link href={"/"}>back to the home page</Link>
         <p>by default the type of the rigidBody is dynamic</p>
-        <p>with the type fixed,the rigidBody is not afected bei the mass of the another body</p>
+        <p>with the type fixed,the rigidBody is not affected bei the mass of the another body</p>
        <div className={"containerCanvas"}>
         <Canvas shadows camera={{
                 fov: 45,
