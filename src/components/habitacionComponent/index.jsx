@@ -5,11 +5,17 @@ Command: npx gltfjsx@6.2.16 habitacion2.glb
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { animated, useSpring } from "@react-spring/three";
 
 export function HabitacionComponent(props) {
   const { nodes, materials } = useGLTF("/models/habitacion2.glb");
+  const { x,z,y,scale } = useSpring({
+    from:{x:20,z:-50,y:-20,scale:0.2},
+    to:[{x:0,z:0,y:-4,scale:1}],
+    config: {duration:3000}
+  })
   return (
-    <group {...props} dispose={null}>
+    <animated.group position-x={x}  position-y={y} position-z={z} scale={scale}  {...props} dispose={null}>
       <group position={[0, -0.399, 0]} scale={[1.173, 1, 1]}>
         <mesh
           geometry={nodes.Cube002_1.geometry}
@@ -970,18 +976,18 @@ export function HabitacionComponent(props) {
         scale={0.272}
       />
       <mesh
-        geometry={nodes.Plane007.geometry}
-        material={materials.suelo}
-        position={[0, -0.177, 0]}
-        scale={61.229}
-      />
-      <mesh
         geometry={nodes.mure001.geometry}
         material={materials.emissivo}
         position={[-2.116, 8.447, -3.863]}
         scale={[1.173, 1, 1]}
       />
-    </group>
+      <mesh
+        geometry={nodes.Plane007.geometry}
+        material={materials.suelo}
+        position={[0, -0.177, 0]}
+        scale={61.229}
+      />
+    </animated.group>
   );
 }
 
