@@ -14,12 +14,12 @@ const DynamicsScene = () => {
     cubeRef.current.applyImpulse({ x: -25, y: 0, z: 0 });
   };
   const cubeMovementHandler = () => {
-      if (isJump.current === true) {
-        if (allKeys.jump) {
-          cubeRef.current.applyImpulse({ x: 0, y: 40, z: 0 });
-          isJump.current = false;
-        }
+    if (isJump.current === true) {
+      if (allKeys.jump) {
+        cubeRef.current.applyImpulse({ x: 0, y: 40, z: 0 });
+        isJump.current = false;
       }
+    }
     if (allKeys.forward) {
       cubeRef.current.applyImpulse({ x: 0, y: 0, z: -0.3 });
     }

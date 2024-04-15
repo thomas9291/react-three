@@ -32,6 +32,10 @@ export default function Home() {
           <h2>Instance Mesh</h2>
          <Link href={"/instanceMesh"}>Let go</Link>
         </div>
+        <div className={styles.card}>
+          <h2>Sensor</h2>
+         <Link href={"/sensor"}>Let go</Link>
+        </div>
         </div>
      
     </main>
