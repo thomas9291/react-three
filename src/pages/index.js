@@ -28,6 +28,10 @@ export default function Home() {
           <h2>Room 3d model</h2>
          <Link href={"/habitacionModel"}>room 3d model</Link>
         </div>
+        <div className={styles.card}>
+          <h2>Instance Mesh</h2>
+         <Link href={"/instanceMesh"}>Let go</Link>
+        </div>
         </div>
      
     </main>
