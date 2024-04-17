@@ -49,6 +49,10 @@ export default function Home() {
             <option value="/godRays">godRays</option>
           </select>
         </div>
+        <div className={styles.card}>
+          <h2>Alien</h2>
+          <Link href={"/alien"}>Let go</Link>
+        </div>
       </div>
     </main>
   );
