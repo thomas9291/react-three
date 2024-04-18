@@ -8,6 +8,7 @@ const AlienComponent = () => {
   const lightRef = useRef();
 
   const alien = useLoader(GLTFLoader, "/models/alien.glb");
+  const barilla = useLoader(GLTFLoader, "/models/barille.glb");
   useHelper(lightRef, THREE.DirectionalLightHelper, 1);
 
   return (
@@ -33,6 +34,13 @@ const AlienComponent = () => {
       />
       <group>
         <Suspense fallback={null}>
+          <primitive
+            object={barilla.scene}
+            castShadow
+            position-x={4}
+            position-z={2}
+            scale={0.5}
+          />
           <primitive
             object={alien.scene}
             castShadow
