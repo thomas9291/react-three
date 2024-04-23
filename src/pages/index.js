@@ -53,6 +53,10 @@ export default function Home() {
           <h2>Alien</h2>
           <Link href={"/alien"}>Let go</Link>
         </div>
+        <div className={styles.card}>
+          <h2>Monkey Eyes</h2>
+          <Link href={"/monkey"}>Let go</Link>
+        </div>
       </div>
     </main>
   );
