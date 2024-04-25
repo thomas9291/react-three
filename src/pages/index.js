@@ -13,7 +13,7 @@ export default function Home() {
   };
   return (
     <main>
-      <h2 className={styles.title}>hello</h2>
+      <h2 className={styles.title}>React Three demo.</h2>
       <div className={styles.cardContainer}>
         <div className={styles.card}>
           <h2>Types</h2>
